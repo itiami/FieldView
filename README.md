@@ -1,4 +1,4 @@
-<p align="center"><img src="src/main/resources/static/media/img.png" alt="FieldWise Logo" width="20%"></p>
+<p align="center"><img src="readme-content/img.png" alt="FieldWise Logo" width="20%"></p>
 
 
 
