@@ -247,8 +247,6 @@ Developed using **Spring Boot**, **Flutter**, and **JavaFX**.
 
 > “FieldWise — where every onsite moment counts.”
 
-<<<<<<< HEAD
-=======
 ### Project Directory Structure
 ```markdown
 fieldwise/
@@ -339,4 +337,3 @@ fieldwise/
    └─ schemas/
 
 ```
->>>>>>> master
