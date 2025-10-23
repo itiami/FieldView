@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fieldwise-backend.iml" filepath="$PROJECT_DIR$/.idea/modules/fieldwise-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apps/api/fieldwise-backend.apps.api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/apps/api/fieldwise-backend.apps.api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/audit/fieldwise-backend.modules.audit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/audit/fieldwise-backend.modules.audit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/billing/fieldwise-backend.modules.billing.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/billing/fieldwise-backend.modules.billing.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/common/fieldwise-backend.modules.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/common/fieldwise-backend.modules.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/identity/fieldwise-backend.modules.identity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/identity/fieldwise-backend.modules.identity.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/media/fieldwise-backend.modules.media.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/media/fieldwise-backend.modules.media.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/ocr/fieldwise-backend.modules.ocr.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/ocr/fieldwise-backend.modules.ocr.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/timelogs/fieldwise-backend.modules.timelogs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/timelogs/fieldwise-backend.modules.timelogs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/workorders/fieldwise-backend.modules.workorders.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/workorders/fieldwise-backend.modules.workorders.main.iml" />
+    </modules>
+  </component>
+</project>

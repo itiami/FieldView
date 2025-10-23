@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.40/398c6d2d7c42c96b65e78d2ddc9be0058c163453/lombok-1.18.40.jar" />
+        </processorPath>
+        <module name="fieldwise-backend.modules.workorders.main" />
+        <module name="fieldwise-backend.modules.audit.main" />
+        <module name="fieldwise-backend.modules.ocr.main" />
+        <module name="fieldwise-backend.apps.api.main" />
+        <module name="fieldwise-backend.modules.timelogs.main" />
+        <module name="fieldwise-backend.modules.common.main" />
+        <module name="fieldwise-backend.modules.identity.main" />
+        <module name="fieldwise-backend.modules.billing.main" />
+        <module name="fieldwise-backend.modules.media.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="fieldwise-backend.apps.api" options="-parameters" />
+      <module name="fieldwise-backend.apps.api.main" options="-parameters" />
+      <module name="fieldwise-backend.apps.api.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.audit" options="-parameters" />
+      <module name="fieldwise-backend.modules.audit.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.audit.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.billing" options="-parameters" />
+      <module name="fieldwise-backend.modules.billing.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.billing.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.common" options="-parameters" />
+      <module name="fieldwise-backend.modules.common.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.common.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.identity" options="-parameters" />
+      <module name="fieldwise-backend.modules.identity.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.identity.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.media" options="-parameters" />
+      <module name="fieldwise-backend.modules.media.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.media.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.ocr" options="-parameters" />
+      <module name="fieldwise-backend.modules.ocr.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.ocr.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.timelogs" options="-parameters" />
+      <module name="fieldwise-backend.modules.timelogs.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.timelogs.test" options="-parameters" />
+      <module name="fieldwise-backend.modules.workorders" options="-parameters" />
+      <module name="fieldwise-backend.modules.workorders.main" options="-parameters" />
+      <module name="fieldwise-backend.modules.workorders.test" options="-parameters" />
+    </option>
+  </component>
+</project>

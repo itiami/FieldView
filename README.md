@@ -247,3 +247,96 @@ Developed using **Spring Boot**, **Flutter**, and **JavaFX**.
 
 > “FieldWise — where every onsite moment counts.”
 
+<<<<<<< HEAD
+=======
+### Project Directory Structure
+```markdown
+fieldwise/
+├─ README.md
+├─ .gitignore
+├─ docker/
+│  ├─ docker-compose.yml               # Postgres, MinIO, Keycloak, Redis, FFmpeg worker image, Tesseract image
+│  ├─ keycloak/realm-export.json
+│  └─ postgres/init/01_init.sql
+├─ infra/
+│  ├─ k8s/                             # (later) manifests/helm
+│  └─ scripts/                         # helper scripts
+├─ gateway/                            # NGINX/OpenResty (optional, later)
+├─ backend/                            # Spring Boot multi-module Gradle (Groovy)
+│  ├─ build.gradle
+│  ├─ settings.gradle
+│  ├─ gradle/
+│  ├─ apps/
+│  │  └─ api/                          # Boot app runner (depends on modules)
+│  │     ├─ build.gradle
+│  │     └─ src/main/java/com/fieldwise/api/FieldWiseApiApplication.java
+│  ├─ modules/
+│  │  ├─ common/                       # common DTOs, errors, utils
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/common/...
+│  │  ├─ identity/                     # auth/OIDC, RBAC, tenancy helpers
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/identity/...
+│  │  ├─ workorders/
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/workorders/...
+│  │  ├─ timelogs/                     # clock in/out, GPS
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/timelogs/...
+│  │  ├─ media/                        # uploads, presigned URLs, thumbnails, HLS
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/media/...
+│  │  ├─ ocr/                          # OCR job orchestration
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/ocr/...
+│  │  ├─ billing/
+│  │  │  ├─ build.gradle
+│  │  │  └─ src/main/java/com/fieldwise/billing/...
+│  │  └─ audit/
+│  │     ├─ build.gradle
+│  │     └─ src/main/java/com/fieldwise/audit/...
+│  └─ libs/
+│     └─ domain/                       # (optional) domain model lib
+├─ web/                                # Angular
+│  ├─ fieldwise-web/
+│  │  ├─ angular.json
+│  │  ├─ package.json
+│  │  ├─ src/
+│  │  │  ├─ app/
+│  │  │  │  ├─ core/                   # auth guard, interceptors
+│  │  │  │  ├─ shared/                 # ui components
+│  │  │  │  ├─ features/
+│  │  │  │  │  ├─ realtime/            # live connectivity dashboard (WebSocket/STOMP)
+│  │  │  │  │  ├─ users/               # user management
+│  │  │  │  │  ├─ reports/             # analytics & reporting views
+│  │  │  │  │  └─ documents/           # employee docs (contracts, payslips)
+│  │  │  │  └─ app.routes.ts
+│  │  │  └─ index.html
+│  │  └─ projects/                     # (optional libs)
+│  └─ proxy.conf.json                  # dev proxy → Spring Boot API
+├─ mobile/                             # Flutter
+│  └─ fieldwise_mobile/
+│     ├─ pubspec.yaml
+│     └─ lib/
+│        ├─ main.dart
+│        ├─ core/                      # auth, api, storage
+│        ├─ features/
+│        │  ├─ clock/
+│        │  ├─ scan_ocr/
+│        │  ├─ media/
+│        │  └─ video_messages/
+│        └─ widgets/
+├─ static-service/                     # Python (FastAPI) for static/SSR/reporting
+│  ├─ pyproject.toml
+│  ├─ fieldwise_static/
+│  │  ├─ main.py
+│  │  ├─ prerender/                    # optional Angular prerender hooks
+│  │  ├─ reports/                      # PDF generation (WeasyPrint / ReportLab)
+│  │  └─ storage/                      # static assets mount
+│  └─ Dockerfile
+└─ sharing/
+   ├─ openapi/                         # generated OpenAPI from Spring (springdoc)
+   └─ schemas/
+
+```
+>>>>>>> master
