@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "web-modular": {
+    "web-ngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/web-modular",
+            "outputPath": "dist/web-ngular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "web-modular:build:production"
+              "buildTarget": "web-ngular:build:production"
             },
             "development": {
-              "buildTarget": "web-modular:build:development"
+              "buildTarget": "web-ngular:build:development"
             }
           },
           "defaultConfiguration": "development"
