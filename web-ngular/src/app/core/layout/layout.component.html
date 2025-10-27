@@ -1,20 +1,37 @@
-<!-- app/core/layout/layout.component.html -->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav mode="side" opened>
-    <fw-sidebar></fw-sidebar>
+  <mat-sidenav
+    #snav
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+    class="app-sidenav"
+    role="navigation"
+  >
+    <fw-sidebar (navigate)="onNavigate()"></fw-sidebar>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>FieldWise</span>
+    <mat-toolbar color="primary" class="app-toolbar" role="banner">
+      <button
+        mat-icon-button
+        (click)="toggleNav()"
+        aria-label="Toggle navigation menu"
+        class="burger"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span class="brand">{{ appTitle() }}</span>
       <span class="spacer"></span>
-      <!-- user/menu icons etc -->
+
+      <button mat-icon-button aria-label="Notifications">
+        <mat-icon>notifications</mat-icon>
+      </button>
       <button mat-icon-button aria-label="Account">
         <mat-icon>account_circle</mat-icon>
       </button>
     </mat-toolbar>
 
-    <main class="content">
+    <main class="content" role="main">
       <router-outlet></router-outlet>
     </main>
 

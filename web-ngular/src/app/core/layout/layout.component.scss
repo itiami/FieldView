@@ -1,0 +1,33 @@
+.sidenav-container {
+  height: 100dvh;
+  background: var(--mat-sys-surface, #fafafa);
+}
+
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  backdrop-filter: saturate(120%) blur(6px);
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+.app-sidenav {
+  width: 280px;
+  border-right: 1px solid rgba(0,0,0,0.06);
+}
+
+.burger {
+  margin-right: 8px;
+}
