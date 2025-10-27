@@ -1,1 +1,23 @@
-<p>layout works!</p>
+<!-- app/core/layout/layout.component.html -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened>
+    <fw-sidebar></fw-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>FieldWise</span>
+      <span class="spacer"></span>
+      <!-- user/menu icons etc -->
+      <button mat-icon-button aria-label="Account">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <fw-footer></fw-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

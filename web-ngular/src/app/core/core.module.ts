@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout/layout.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +14,13 @@ import { LoadingSpinnerComponent } from './components/loading-spinner/loading-sp
     LoadingSpinnerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
+  ],
+  exports: [
+    LayoutComponent,
+    NotFoundComponent,
+    LoadingSpinnerComponent
   ]
 })
 export class CoreModule { }

@@ -1,3 +1,6 @@
+mkdir web-modular, cd web-modular # Windows Only
+ng new web-modular  --directory ./ --standalone false --routing true --style=scss
+
 ng g m features/users --routing   
 ng g m features/documents --routing
 ng g m features/realtime --routing
@@ -13,7 +16,7 @@ ng g c features/reports/components/report-detail --module=features/reports/repor
 ng g c shared/components/sidebar --module=shared/shared.module
 ng g c shared/components/footer --module=shared/shared.module
 
-# Generate Admin Component
+# Generate Admin Module with Lazy Loading and Admin Component in one line
 ng g module features/admin --route admin --module app.module; ng g component features/admin --module=features/admin/admin.module
 
 
@@ -42,3 +45,8 @@ ng g guard core/guards/unsaved-changes
 ng g interceptor core/interceptors/auth
 ng g interceptor core/interceptors/error
 ng g interceptor core/interceptors/loader
+
+
+ng g class core/models/user --type=model
+ng g class core/models/clock-event --type=model
+ng g class core/models/api-response --type=model
