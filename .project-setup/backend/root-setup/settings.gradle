@@ -1,0 +1,13 @@
+// settings.gradle (in root folder i.g backend)
+
+rootProject.name = 'fieldwise-backend'
+
+include 'apps:api'
+include 'modules:common'
+include 'modules:identity'
+include 'modules:workorders'
+include 'modules:timelogs'
+include 'modules:media'
+include 'modules:ocr'
+include 'modules:billing'
+include 'modules:audit'

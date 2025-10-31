@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './core/layout/layout.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -12,7 +13,8 @@ const routes: Routes = [
       { path: 'documents', loadChildren: () => import('./features/documents/documents.module').then(m => m.DocumentsModule) },
       { path: 'realtime', loadChildren: () => import('./features/realtime/realtime.module').then(m => m.RealtimeModule) },
       { path: 'reports', loadChildren: () => import('./features/reports/reports.module').then(m => m.ReportsModule) },
-      { path: '', redirectTo: 'users', pathMatch: 'full' }
+      {path: 'ex', loadChildren:()=> import('./extra/extra/extra.module').then(m=>m.ExtraModule)},
+      { path: '', redirectTo: 'reports', pathMatch: 'full' }
     ]
   },
   { path: '**', redirectTo: '' }

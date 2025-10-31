@@ -14,21 +14,73 @@
 <!-- Main navigation -->
 <nav class="nav">
   <mat-nav-list>
-    <a
-      mat-list-item
-      *ngFor="let item of menuTop"
-      [routerLink]="item.link"
-      [routerLinkActive]="'active'"
-     [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
-      (click)="onNavigate()"
-      aria-current="page"
-    >
-      <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-      <span matListItemTitle>{{ item.label }}</span>
-      <span *ngIf="item.badge" matListItemMeta>
-        <span matBadge="{{item.badge}}" matBadgeSize="small"></span>
-      </span>
-    </a>
+
+    <!-- Top-level items -->
+    <ng-container *ngFor="let item of menuTop">
+
+      <!-- Case 1: item without children -> standard link -->
+      <a
+        *ngIf="!hasChildren(item)"
+        mat-list-item
+        [routerLink]="item.link!"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: item.exact ?? true }"
+        (click)="onNavigate()"
+        aria-current="page"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+        <span *ngIf="item.badge" matListItemMeta>
+          <span matBadge="{{item.badge}}" matBadgeSize="small"></span>
+        </span>
+      </a>
+
+      <!-- Case 2: item with children -> collapsible section button -->
+      <div
+        *ngIf="hasChildren(item)"
+        class="section"
+        [class.active]="isSectionActive(item)"
+      >
+        <button
+          mat-list-item
+          type="button"
+          class="section-trigger"
+          (click)="toggleSection(item.link)"
+          (keydown.enter)="toggleSection(item.link)"
+          (keydown.space)="toggleSection(item.link)"
+          [attr.aria-expanded]="isExpanded(item)"
+          [attr.aria-controls]="(item.link) + '-panel'"
+        >
+          <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+          <span matListItemTitle>{{ item.label }}</span>
+          <span class="chev" matListItemMeta [class.rotate]="isExpanded(item)">
+            <mat-icon>expand_more</mat-icon>
+          </span>
+        </button>
+
+        <!-- Children panel -->
+        <div
+          class="children"
+          [id]="item.link + '-panel'"
+          [class.open]="isExpanded(item)"
+        >
+          <a
+            *ngFor="let child of item.children!"
+            mat-list-item
+            class="child"
+            [routerLink]="child.link"
+            [class.active]="isLinkActive(child.link, child.exact ?? true)"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: child.exact ?? true }"
+            (click)="onNavigate()"
+          >
+            <span class="dot" matListItemIcon></span>
+            <span matListItemTitle>{{ child.label }}</span>
+          </a>
+        </div>
+      </div>
+
+    </ng-container>
   </mat-nav-list>
 </nav>
 
